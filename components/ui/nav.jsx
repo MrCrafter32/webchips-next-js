@@ -7,20 +7,18 @@ const Navbar = () => {
   const menuRef = useRef(null);
 
   const toggleMenu = (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     setIsOpen(!isOpen);
   };
 
-
-
+ 
 
   return (
-    <nav className="bg-[#2A2A2A] text-white">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="bg-[#2A2A2A] text-white z-10 relative">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center relative">
         <div className="flex items-center space-x-2">
           <div className="text-xl font-bold text-[#FF7A00] ">Web</div>
           <div className="text-xl font-bold">Chips</div>
-
         </div>
         <div className="hidden md:block text-xl">
           <ul className="flex gap-8">
@@ -51,7 +49,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden absolute right-2">
           <button
             id="menu-icon"
             className="focus:outline-none"
@@ -78,7 +76,7 @@ const Navbar = () => {
         id="menu-list"
         className={`bg-[#2A2A2A] text-white md:hidden ${
           isOpen ? "block" : "hidden"
-        } transition duration-300 ease-in-out `}
+        } absolute top-16 right-0 w-full`}
         ref={menuRef}
       >
         <ul className="flex flex-col gap-2 p-4">
