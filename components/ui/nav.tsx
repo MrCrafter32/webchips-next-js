@@ -6,7 +6,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const toggleMenu = (e) => {
+  const toggleMenu = (e :
+    | React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => {
     e.stopPropagation();
     setIsOpen(!isOpen);
   };

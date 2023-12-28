@@ -16,6 +16,7 @@ const PortfolioPage = () => {
                 src="http://krunker.io"
                 width="500"
                 height="200"
+                className="w-full h-full" 
               />
             </div>
             <img src="/bottombar.svg" alt="null" className="bottombar" />
@@ -38,7 +39,8 @@ const PortfolioPage = () => {
                 type="text/html"
                 src="http://krunker.io"
                 width="500"
-                height="200"
+                height="200"                                   
+                className="w-full h-full" 
               />
             </div>
             <img src="/bottombar.svg" alt="null" className="bottombar" />
