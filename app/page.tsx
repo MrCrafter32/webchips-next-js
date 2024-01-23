@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import "./globals.css";
-import Blobs from "@/components/ui/blobs";
+import { Blobs } from "@/components/ui/blobs";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -29,8 +29,8 @@ const page = () => {
           </div>
         </div>
       </div>
-
       <Blobs />
+
     </>
   );
 };

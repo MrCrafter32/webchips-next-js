@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "https://faketwitch-nextjs.vercel.app",
+        "destination": "/api/sharp"
+      }
+    ]
+  }
