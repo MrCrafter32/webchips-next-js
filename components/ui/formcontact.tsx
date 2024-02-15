@@ -39,10 +39,20 @@ const FormContact = () => {
       })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
-      }
+      const formElement = document.querySelector("form");
+      if (formElement) {
+        const formDatab = new FormData(formElement);
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwSlGRaZtC2qDui6fqhohjHNnksRTHIOA5AQI53IClWD-pLdgeR3tmZuMIjOejiDLYo/exec",
+          {
+             mode: 'no-cors',
+
+            method: "POST",
+            body: formDatab
+          }
+        )
+          
+      }}
 
 
   return (
