@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
+
 
 const formSchema = z.object({
     username: z.string().min(2).max(50),
@@ -51,16 +53,17 @@ const FormContact = () => {
           }
         )
         .then(() => {
-          alert("Form submitted successfully!");
-          form.reset();
+         toast("Successfully submitted form! We will contact you soon!!")
+         form.reset();
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
+          toast("Error submitting form! Please try again later!");  
         });
       }
     }
 
-
+    
   return (
     <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
