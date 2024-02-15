@@ -45,14 +45,20 @@ const FormContact = () => {
         fetch(
           "https://script.google.com/macros/s/AKfycbwSlGRaZtC2qDui6fqhohjHNnksRTHIOA5AQI53IClWD-pLdgeR3tmZuMIjOejiDLYo/exec",
           {
-             mode: 'no-cors',
-
+            mode: 'no-cors',
             method: "POST",
             body: formDatab
           }
         )
-          
-      }}
+        .then(() => {
+          alert("Form submitted successfully!");
+          form.reset();
+        })
+        .catch((error) => {
+          console.error("Error submitting form:", error);
+        });
+      }
+    }
 
 
   return (
