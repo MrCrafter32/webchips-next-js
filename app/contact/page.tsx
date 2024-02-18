@@ -1,5 +1,9 @@
 import { FormContact } from '@/components/ui/formcontact';
+<<<<<<< HEAD
 import React from 'react';
+=======
+import { Instagram } from 'lucide-react';
+>>>>>>> 529f7a8b38edecd254d6b9850a925a3aaff0dbf1
 
 const page = () => {
 
@@ -17,9 +21,7 @@ const page = () => {
         <p className="text-3xl font-bold text-white pt-3">
           Or you can reach us at
         </p>
-        <p className="text-2xl font-bold text-white pt-3">
-          
-        </p>
+        <Instagram size={32} /> 
       </div>
 
     </>

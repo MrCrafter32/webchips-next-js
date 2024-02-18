@@ -6,6 +6,7 @@ import './globals.css'
 import '/dist/output.css'
 import Navbar from '@/components/ui/nav'
 import Router from 'next/router';
+import { Toaster } from 'sonner';
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Navbar />
         {children}
+        <Toaster />
       </body>
       
     </html>

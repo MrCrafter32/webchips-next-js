@@ -24,6 +24,7 @@ const page = () => {
              <span className="inline-block  pl-3">
                 <img src="/right-icon.svg" width={30} height={30} alt="Right Icon" />
               </span>
+              
              </p>
             
           </div>

@@ -19,8 +19,8 @@ const Navbar = () => {
     <nav className="bg-[#2A2A2A] text-white z-10 relative">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center relative">
         <div className="flex items-center space-x-2">
-          <div className="text-xl font-bold text-[#FF7A00] ">Web</div>
-          <div className="text-xl font-bold">Chips</div>
+          <div className="text-2xl font-bold text-[#FF7A00] ">Web</div>
+          <div className="text-2xl font-bold">Chips</div>
         </div>
         <div className="hidden md:block text-xl">
           <ul className="flex gap-8">
