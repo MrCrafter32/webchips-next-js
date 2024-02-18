@@ -10,7 +10,7 @@ const PortfolioPage = () => {
         <div className=" flex flex-col md:flex-row pt-10">
           <div className="window">
             <img src="/topbar.svg" alt="null" className="topbar" />
-            <div className="webstie-content">
+            <div className="website-content">
               <embed
                 type="text/html"
                 src="http://krunker.io"

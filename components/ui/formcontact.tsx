@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
+
 
 const formSchema = z.object({
     username: z.string().min(2).max(50),
@@ -39,12 +41,29 @@ const FormContact = () => {
       })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+      const formElement = document.querySelector("form");
+      if (formElement) {
+        const formDatab = new FormData(formElement);
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwSlGRaZtC2qDui6fqhohjHNnksRTHIOA5AQI53IClWD-pLdgeR3tmZuMIjOejiDLYo/exec",
+          {
+            mode: 'no-cors',
+            method: "POST",
+            body: formDatab
+          }
+        )
+        .then(() => {
+         toast("Successfully submitted form! We will contact you soon!!")
+         form.reset();
+        })
+        .catch((error) => {
+          console.error("Error submitting form:", error);
+          toast("Error submitting form! Please try again later!");  
+        });
       }
+    }
 
-
+    
   return (
     <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
