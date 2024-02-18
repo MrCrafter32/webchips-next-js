@@ -1,4 +1,5 @@
 import { FormContact } from '@/components/ui/formcontact';
+import React from 'react';
 
 const page = () => {
 
@@ -7,7 +8,7 @@ const page = () => {
     <>
       <div className="bg-white flex justify-center">
         <div className="form bg-[#f0f0f0f0] w-1/2 rounded-3xl  my-10 shadow-xl">
-          <div className="items-center justify-center px-5 py-5">
+          <div className="items-center justify-center px-5 py-5">5
          <FormContact />
          </div>
         </div>
